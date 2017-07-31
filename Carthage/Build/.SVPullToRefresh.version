@@ -1,0 +1,9 @@
+{
+  "commitish" : "e86f429aa6526db5799946139bb1fe080a95cf13",
+  "iOS" : [
+    {
+      "hash" : "e92e8cb8dd470da107c8ca6b6bcc67570a324c7264f5b6fde23bb56fdf1bd14e",
+      "name" : "SVPullToRefresh"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "commitish" : "2f7b8ce8a977218e1e93a5a746dbcc4dc6370ce1",
+  "iOS" : [
+    {
+      "hash" : "afe38e986c26b64a6f789b9490b1fc87c616edd7866cf7ab64addffc7c78b5b4",
+      "name" : "MJRefresh"
+    }
+  ]
+}
