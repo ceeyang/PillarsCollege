@@ -44,6 +44,15 @@ extension NSDictionary{
     }
 }
 
+extension Dictionary {
+    public func JSONString() -> Dictionary {
+        let data = try!JSONSerialization.data(withJSONObject: self, options: [])
+        let strJson = String(data: data, encoding: String.Encoding.utf8)
+        let dict = ["json":strJson]
+        return dict as! Dictionary<Key, Value>
+    }
+}
+
 
 
 /*------------------------- 我是萌萌哒的分割线 -------- #^_^# ---------------------------------------*/

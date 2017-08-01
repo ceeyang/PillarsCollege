@@ -16,3 +16,5 @@ let kNavigationBarColor = RGB(r: 241, g: 139, b: 52)
 let PublicTitleColor = RGB(r: 51, g: 51, b: 51)
 let PublicContentColor = RGB(r: 136, g: 136, b: 136)
 
+let kCommon_LineColor = RGB(r: 196, g: 197, b: 198)
+

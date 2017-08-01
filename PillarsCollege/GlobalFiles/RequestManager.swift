@@ -24,8 +24,8 @@ class RequestManager: NSObject {
     /**
      *  请求公共数据,只返回code 为0000 的情况,对请求失败后的错误代码进行了处理
      */
-    func requestCommonDataWith(url:String,parameters:NSDictionary? = nil,completion: @escaping (DataResponse<Any>) -> Void){
-        let dic  = parameters?.JSONString() as? [String : AnyObject]
+    func requestCommonDataWith(url:String,parameters:Dictionary<String, Any>? = nil,completion: @escaping (DataResponse<Any>) -> Void){
+        let dic  = parameters?.JSONString()
         Alamofire.request(url, method: .post, parameters:dic, encoding: URLEncoding.default, headers: nil).responseJSON { [weak self](response) in
             
             switch response.result {
