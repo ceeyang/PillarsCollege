@@ -26,7 +26,7 @@ func delay(_ delay:Double, closure:@escaping ()->()) {
 }
 
 func printLog<T>(_ message: T, file: String = #file, method: String = #function, line: Int = #line) {
-    let range = file.range(of: "CloudStudy")
+    let range = file.range(of: "PillarsCollege")
     let path  = file.substring(from: (range?.lowerBound)!)
     print("\(path)[\(line)], \(method): \(message)")
 }

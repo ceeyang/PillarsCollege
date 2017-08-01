@@ -20,6 +20,9 @@
 		767F62741F223ABB00E2902B /* PersonInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F62731F223ABB00E2902B /* PersonInfoModel.swift */; };
 		767F62761F223E9500E2902B /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767F62751F223E9500E2902B /* PersonTableViewCell.swift */; };
 		769106611F2E28510056E63F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769106601F2E28510056E63F /* LoginViewController.swift */; };
+		769FD4C81F302C2E00E4CD89 /* DESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 769FD4C71F302C2E00E4CD89 /* DESUtils.m */; };
+		769FD4CC1F302C9300E4CD89 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 769FD4CB1F302C9300E4CD89 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		769FD4CE1F304BCF00E4CD89 /* RequestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769FD4CD1F304BCF00E4CD89 /* RequestPath.swift */; };
 		76B362F81F1F88DA00F49B99 /* EZSwiftExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B362F71F1F88AF00F49B99 /* EZSwiftExtensions.framework */; };
 		76B362F91F1F88DA00F49B99 /* EZSwiftExtensions.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B362F71F1F88AF00F49B99 /* EZSwiftExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		76B941C21F1F11550052019C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B941C11F1F11550052019C /* AppDelegate.swift */; };
@@ -91,6 +94,12 @@
 		767F62731F223ABB00E2902B /* PersonInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInfoModel.swift; sourceTree = "<group>"; };
 		767F62751F223E9500E2902B /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		769106601F2E28510056E63F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		769FD4C11F302C0100E4CD89 /* PillarsCollege-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PillarsCollege-Bridging-Header.h"; sourceTree = "<group>"; };
+		769FD4C61F302C2E00E4CD89 /* DESUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DESUtils.h; sourceTree = "<group>"; };
+		769FD4C71F302C2E00E4CD89 /* DESUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DESUtils.m; sourceTree = "<group>"; };
+		769FD4CA1F302C9300E4CD89 /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		769FD4CB1F302C9300E4CD89 /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		769FD4CD1F304BCF00E4CD89 /* RequestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestPath.swift; sourceTree = "<group>"; };
 		76B362F71F1F88AF00F49B99 /* EZSwiftExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EZSwiftExtensions.framework; path = Carthage/Build/iOS/EZSwiftExtensions.framework; sourceTree = "<group>"; };
 		76B941BE1F1F11550052019C /* PillarsCollege.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PillarsCollege.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B941C11F1F11550052019C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,19 +184,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		769FD4B71F30272F00E4CD89 /* Libraries */ = {
+		769FD4BF1F302BDA00E4CD89 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				769FD4B81F30274000E4CD89 /* OCLibrary */,
+				769FD4C01F302BE300E4CD89 /* OCLibraries */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
 		};
-		769FD4B81F30274000E4CD89 /* OCLibrary */ = {
+		769FD4C01F302BE300E4CD89 /* OCLibraries */ = {
 			isa = PBXGroup;
 			children = (
+				769FD4C11F302C0100E4CD89 /* PillarsCollege-Bridging-Header.h */,
+				769FD4C91F302C4B00E4CD89 /* NSData+Base64 */,
+				769FD4C51F302C1A00E4CD89 /* DES */,
 			);
-			path = OCLibrary;
+			path = OCLibraries;
+			sourceTree = "<group>";
+		};
+		769FD4C51F302C1A00E4CD89 /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				769FD4C61F302C2E00E4CD89 /* DESUtils.h */,
+				769FD4C71F302C2E00E4CD89 /* DESUtils.m */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
+		769FD4C91F302C4B00E4CD89 /* NSData+Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				769FD4CA1F302C9300E4CD89 /* NSData+Base64.h */,
+				769FD4CB1F302C9300E4CD89 /* NSData+Base64.m */,
+			);
+			path = "NSData+Base64";
 			sourceTree = "<group>";
 		};
 		76B941B51F1F11550052019C = {
@@ -210,6 +240,7 @@
 		76B941C01F1F11550052019C /* PillarsCollege */ = {
 			isa = PBXGroup;
 			children = (
+				769FD4BF1F302BDA00E4CD89 /* Libraries */,
 				76B942051F1F33C20052019C /* SystemFiles */,
 				76B941F71F1F31AB0052019C /* GlobalFiles */,
 				76B941EC1F1F2FDA0052019C /* Business */,
@@ -237,7 +268,6 @@
 		76B941EC1F1F2FDA0052019C /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				769FD4B71F30272F00E4CD89 /* Libraries */,
 				76B9420A1F1F35090052019C /* Login */,
 				76B941FD1F1F32670052019C /* Study */,
 				76B941F91F1F32290052019C /* Personal */,
@@ -290,6 +320,7 @@
 				76B942081F1F348C0052019C /* ConstString.swift */,
 				76C4C47F1F1F988C00983112 /* ExtensionFile.swift */,
 				762AEC681F20F66400D1C605 /* RequestManager.swift */,
+				769FD4CD1F304BCF00E4CD89 /* RequestPath.swift */,
 			);
 			path = GlobalFiles;
 			sourceTree = "<group>";
@@ -404,6 +435,7 @@
 				TargetAttributes = {
 					76B941BD1F1F11550052019C = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -446,6 +478,7 @@
 			files = (
 				767F62741F223ABB00E2902B /* PersonInfoModel.swift in Sources */,
 				762AEC691F20F66400D1C605 /* RequestManager.swift in Sources */,
+				769FD4CC1F302C9300E4CD89 /* NSData+Base64.m in Sources */,
 				76B942041F1F33860052019C /* MainNavigationController.swift in Sources */,
 				76B941C41F1F11550052019C /* ViewController.swift in Sources */,
 				76B941C21F1F11550052019C /* AppDelegate.swift in Sources */,
@@ -454,12 +487,14 @@
 				76B942021F1F33260052019C /* CommonTool.swift in Sources */,
 				76B942001F1F32950052019C /* StudyViewController.swift in Sources */,
 				7636F0001F2F7C4600A2AFBC /* LoginInputView.swift in Sources */,
+				769FD4C81F302C2E00E4CD89 /* DESUtils.m in Sources */,
 				763234051F2E09660011BD69 /* SettingTableViewCell.swift in Sources */,
 				769106611F2E28510056E63F /* LoginViewController.swift in Sources */,
 				76B9420D1F1F352D0052019C /* GuideViewController.swift in Sources */,
 				76B941F61F1F31250052019C /* SubjectViewController.swift in Sources */,
 				76C4C47E1F1F97A600983112 /* HomeSearchBar.swift in Sources */,
 				76B941F01F1F304A0052019C /* MainTabBarController.swift in Sources */,
+				769FD4CE1F304BCF00E4CD89 /* RequestPath.swift in Sources */,
 				767F62761F223E9500E2902B /* PersonTableViewCell.swift in Sources */,
 				76B941FC1F1F32590052019C /* PersonalViewController.swift in Sources */,
 				763234031F2E06870011BD69 /* SettingViewController.swift in Sources */,
@@ -599,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y8MK4UJH8L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,6 +645,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ceeyang.PillarsCollege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PillarsCollege/Libraries/OCLibraries/PillarsCollege-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -618,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y8MK4UJH8L;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,6 +667,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ceeyang.PillarsCollege;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PillarsCollege/Libraries/OCLibraries/PillarsCollege-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

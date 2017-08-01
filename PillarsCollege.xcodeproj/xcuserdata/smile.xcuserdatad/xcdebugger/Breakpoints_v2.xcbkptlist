@@ -2,4 +2,54 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PillarsCollege/GlobalFiles/RequestManager.swift"
+            timestampString = "523262489.332131"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "requestCommonDataWith(url:parameters:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PillarsCollege.RequestManager.requestCommonDataWith(url: Swift.String, parameters: Swift.Optional&lt;__ObjC.NSDictionary&gt;, completion: (Alamofire.DataResponse&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PillarsCollege"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smile/Desktop/Github/PillarsCollege/PillarsCollege/GlobalFiles/RequestManager.swift"
+                  timestampString = "523262489.480306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in PillarsCollege.RequestManager.requestCommonDataWith(url: Swift.String, parameters: Swift.Optional&lt;__ObjC.NSDictionary&gt;, completion: (Alamofire.DataResponse&lt;Any&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "PillarsCollege"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/smile/Desktop/Github/PillarsCollege/PillarsCollege/GlobalFiles/RequestManager.swift"
+                  timestampString = "523262489.484506"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

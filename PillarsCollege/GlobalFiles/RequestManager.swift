@@ -1,9 +1,9 @@
 //
 //  RequestManager.swift
-//  PillarsCollege
+//  CloudStudy
 //
-//  Created by smile on 20/07/2017.
-//  Copyright © 2017 smile. All rights reserved.
+//  Created by pro on 2016/10/20.
+//  Copyright © 2016年 daisy. All rights reserved.
 //
 
 import UIKit
@@ -14,7 +14,7 @@ import SwiftyJSON
 let kPageSize = 10
 
 class RequestManager: NSObject {
-    
+
     static let shared = RequestManager()
     
     func cancelTaskWithFlag(flag:Int)  {
@@ -24,8 +24,8 @@ class RequestManager: NSObject {
     /**
      *  请求公共数据,只返回code 为0000 的情况,对请求失败后的错误代码进行了处理
      */
-    func requestCommonDataWith(url:String,parameters:Dictionary<String, Any>? = nil,completion: @escaping (DataResponse<Any>) -> Void){
-        let dic  = parameters?.JSONString()
+    func requestCommonDataWith(url:String,parameters:NSDictionary? = nil,completion: @escaping (DataResponse<Any>) -> Void){
+        let dic  = parameters?.JSONString() as? [String : AnyObject]
         Alamofire.request(url, method: .post, parameters:dic, encoding: URLEncoding.default, headers: nil).responseJSON { [weak self](response) in
             
             switch response.result {
@@ -73,7 +73,8 @@ class RequestManager: NSObject {
             AppDelegate.shared.buildKeyWindow()
         } else {
             print(msg)
-            //            HUD.flash(.label(msg), delay: 2.0)
+//            HUD.flash(.label(msg), delay: 2.0)
         }
     }
 }
+

@@ -35,10 +35,12 @@ class LoginInputView: UIView {
             })
             if i == 0 {
                 mAccountTextField = textField
+                textField.mTextField.text = "18108120400"
             }
             if i == 1 {
                 textField.mTextField.isSecureTextEntry = true
                 mPasscodeTextField = textField
+                textField.mTextField.text = "123456a"
             }
         }
         

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
@@ -110,17 +111,36 @@ class LoginViewController: UIViewController {
         let passcode = mInputView.mPasscodeTextField.mTextField.text
         if (account != nil) && (passcode != nil) {
             
-//            let appSystem       = "iOS ".appendingFormat("%@", UIDevice.systemVersion())
-//            let dic             = NSMutableDictionary()
-//            dic["login_id"]     = account
-//            dic["password"]     = DESUtils.encryptUseDES(passcode, key: kPwdKey)
-//            dic["appMachine"]   = UIDevice.deviceModel()
-//            dic["appSystem"]    = appSystem
-//            dic["company_name"] = loginView.siteText?.text
-//            dic["client_type"]  = 0
-//            dic["language"]     = NSLocale.current.identifier == "en_US" ? "en_US" : "zh_CN"
-//
-//            RequestManager.shared.requestCommonDataWith(url: "//", parameters: <#T##NSDictionary?#>, completion: <#T##(DataResponse<Any>) -> Void#>)
+            let appSystem       = "iOS ".appendingFormat("%@", UIDevice.systemVersion())
+            let dict = NSMutableDictionary()
+            dict["login_id"] = account
+            dict["password"] = DESUtils.encryptUseDES(passcode, key: kPwdKey)
+            dict["client_type"] = NSNumber(value: 0)
+            dict["appSystem"] = appSystem
+            dict["appMachine"] = UIDevice.deviceModel()
+            dict["type"] = "0"
+            dict["only_id"] = ""
+            dict["name"] = ""
+
+            RequestManager.shared.requestCommonDataWith(url: URL_Login, parameters: dict, completion: { (response) in
+
+                printLog(response)
+
+                switch response.result {
+                case .success(let value):
+                    let json         = JSON(value)
+                    printLog(json)
+                    let userInofData = response.data
+//                    UserInfo.shared.initFromJson(json: json["data"])
+                    UserDefaults.standard.set(true, forKey: kUSER_HADEVERLOGIN)
+                    UserDefaults.standard.set(userInofData, forKey: kUSER_UserInfoData)
+                    UserDefaults.standard.synchronize()
+//                    AppDelegate.shared.buildKeyWindow()
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            })
+
         }
     }
     
