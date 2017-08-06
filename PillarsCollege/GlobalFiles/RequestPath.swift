@@ -14,8 +14,8 @@ let KiOSCONFIGURL  = "http://demo.zhixueyun.com/app-new1/ios-config.json"
 
 //let BaseURLStr     = "http://demo.zhixueyun.com/mlds/"
 //let BaseURLStr     = "http://tc.zhixueyun.com/zxy-mobile-new/"
-let BaseURLStr     = "http://192.168.3.223:8081/zxy-mobile-new/"
-//let BaseURLStr     = "http://dl.zhixueyun.com/zxy-mobile-new/"
+//let BaseURLStr     = "http://192.168.3.223:8081/zxy-mobile-new/"
+let BaseURLStr     = "http://dl.zhixueyun.com/zxy-mobile-new/"
 
 //MARK: - Home -
 let URL_HomeLayout = BaseURLStr + "sys/loadIndexLayout"

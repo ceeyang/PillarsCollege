@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
             make.right.equalTo(mLoginBtn)
             make.top.equalTo(mLoginBtn.snp.bottom).offset(15)
             make.height.equalTo(20)
-            make.width.greaterThanOrEqualTo(40)
+            make.width.greaterThanOrEqualTo(40)   
         }
     }
     
