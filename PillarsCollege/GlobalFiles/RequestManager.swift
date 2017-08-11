@@ -58,16 +58,16 @@ class RequestManager: NSObject {
 //            UserDefaults.standard[kUSER_HADEVERLOGIN] = false
             AppDelegate.shared.buildKeyWindow()
         } else if  code == "0504" {
-            let time = json["data"]["time"].stringValue
-            let client_type = json["data"]["client_type"].stringValue
-            var mobileType  = ""
-            if client_type == "0" { // ios
-                mobileType = "iOS"
-            } else if client_type == "6" {
-                mobileType = "Android"
-            } else {
-                mobileType = "UnKnown"
-            }
+//            let time = json["data"]["time"].stringValue
+//            let client_type = json["data"]["client_type"].stringValue
+//            var mobileType  = ""
+//            if client_type == "0" { // ios
+//                mobileType = "iOS"
+//            } else if client_type == "6" {
+//                mobileType = "Android"
+//            } else {
+//                mobileType = "UnKnown"
+//            }
 //            HUD.flash(.label("Your acount has logined by anthor \(mobileType) device at \(time)"), delay: 2.0)
 //            UserDefaults.standard[kUSER_HADEVERLOGIN] = false
             AppDelegate.shared.buildKeyWindow()
